@@ -7,6 +7,7 @@
     <title>SportShot - Encontre suas fotos de eventos esportivos</title>
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
     <div id="app">
@@ -14,7 +15,7 @@
       <header class="navbar">
         <div class="container navbar-container">
           <div class="logo">
-            <img src="/images/sportshot-logo-with-text.svg" alt="SportShot Logo" />
+            <h1 class="logo-text">Sport<span>Shot</span></h1>
           </div>
           <div class="nav-actions">
             <button class="btn btn-outline">Acessar</button>
@@ -30,12 +31,12 @@
             <div class="avatar-group">
               <div class="avatars">
                 <!-- Avatares dos profissionais -->
-                <span class="avatar"></span>
-                <span class="avatar"></span>
-                <span class="avatar"></span>
-                <span class="avatar"></span>
-                <span class="avatar"></span>
-                <span class="avatar"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=50&auto=format&fit=crop')"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=50&auto=format&fit=crop')"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=50&auto=format&fit=crop')"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=50&auto=format&fit=crop')"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=50&auto=format&fit=crop')"></span>
+                <span class="avatar" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=50&auto=format&fit=crop')"></span>
               </div>
               <p class="avatar-text">Junte-se aos +de 100 profissionais</p>
             </div>
@@ -48,8 +49,8 @@
             </p>
             
             <div class="hero-buttons">
-              <button class="btn btn-primary">Encontrar minhas fotos</button>
-              <button class="btn btn-outline-light">Buscar eventos</button>
+              <button class="btn btn-primary btn-hero"><i class="fas fa-camera-retro"></i> Encontrar minhas fotos</button>
+              <button class="btn btn-outline-light btn-hero"><i class="fas fa-search"></i> Buscar eventos</button>
             </div>
           </div>
         </div>
@@ -62,108 +63,102 @@
           
           <div class="eventos-grid">
             <!-- Evento 1 -->
-            <div class="evento-card">
-              <div class="evento-img">
-                <span class="evento-tag">Corrida</span>
-                <img src="https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?q=80&w=400&h=300&auto=format&fit=crop" alt="Maratona de Boston 2025" />
-              </div>
-              <div class="evento-info">
-                <h3 class="evento-title">Maratona de Boston 2025</h3>
-                <div class="evento-meta">
-                  <span class="evento-date">21.04.25 - Segunda</span>
-                  <span class="evento-location">Boston, MA</span>
-                </div>
-                <div class="evento-countdown">
-                  <p>Disponíveis em:</p>
-                  <div class="countdown-timer">
-                    <div class="time-block">01</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">23</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">59</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">10</div>
+            <div class="evento-card" style="background-image: url('https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?q=80&w=400&h=300&auto=format&fit=crop')">
+              <span class="evento-tag">Corrida</span>
+              <div class="evento-overlay">
+                <div class="evento-info">
+                  <h3 class="evento-title">Maratona de Boston 2025</h3>
+                  <div class="evento-meta">
+                    <span class="evento-date"><i class="far fa-calendar-alt"></i> 21.04.25 - Segunda</span>
+                    <span class="evento-location"><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
+                  </div>
+                  <div class="evento-countdown">
+                    <p>Disponíveis em:</p>
+                    <div class="countdown-timer">
+                      <div class="time-block">23</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">59</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">10</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Evento 2 -->
-            <div class="evento-card">
-              <div class="evento-img">
-                <span class="evento-tag">Triatlo</span>
-                <img src="https://images.unsplash.com/photo-1517954275097-c5c03c261e3c?q=80&w=400&h=300&auto=format&fit=crop" alt="Triatlo de Nova York" />
-              </div>
-              <div class="evento-info">
-                <h3 class="evento-title">Triatlo de Nova York</h3>
-                <div class="evento-meta">
-                  <span class="evento-date">18.07.25 - Terça</span>
-                  <span class="evento-location">Nova York, NY</span>
-                </div>
-                <div class="evento-countdown">
-                  <p>Disponíveis em:</p>
-                  <div class="countdown-timer">
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
+            <div class="evento-card" style="background-image: url('https://images.unsplash.com/photo-1517954275097-c5c03c261e3c?q=80&w=400&h=300&auto=format&fit=crop')">
+              <span class="evento-tag">Triatlo</span>
+              <div class="evento-overlay">
+                <div class="evento-info">
+                  <h3 class="evento-title">Triatlo de Nova York</h3>
+                  <div class="evento-meta">
+                    <span class="evento-date"><i class="far fa-calendar-alt"></i> 18.07.25 - Terça</span>
+                    <span class="evento-location"><i class="fas fa-map-marker-alt"></i> Nova York, NY</span>
+                  </div>
+                  <div class="evento-countdown">
+                    <p>Disponíveis em:</p>
+                    <div class="countdown-timer">
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Evento 3 -->
-            <div class="evento-card">
-              <div class="evento-img">
-                <span class="evento-tag">Corrida</span>
-                <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?q=80&w=400&h=300&auto=format&fit=crop" alt="Meia Maratona de Chicago" />
-              </div>
-              <div class="evento-info">
-                <h3 class="evento-title">Meia Maratona de Chicago</h3>
-                <div class="evento-meta">
-                  <span class="evento-date">07.09.25 - Domingo</span>
-                  <span class="evento-location">Chicago, IL</span>
-                </div>
-                <div class="evento-countdown">
-                  <p>Disponíveis em:</p>
-                  <div class="countdown-timer">
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">03</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">59</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">10</div>
+            <div class="evento-card" style="background-image: url('https://images.unsplash.com/photo-1571008887538-b36bb32f4571?q=80&w=400&h=300&auto=format&fit=crop')">
+              <span class="evento-tag">Corrida</span>
+              <div class="evento-overlay">
+                <div class="evento-info">
+                  <h3 class="evento-title">Meia Maratona de Chicago</h3>
+                  <div class="evento-meta">
+                    <span class="evento-date"><i class="far fa-calendar-alt"></i> 07.09.25 - Domingo</span>
+                    <span class="evento-location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</span>
+                  </div>
+                  <div class="evento-countdown">
+                    <p>Disponíveis em:</p>
+                    <div class="countdown-timer">
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">03</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">59</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">10</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Evento 4 -->
-            <div class="evento-card">
-              <div class="evento-img">
-                <span class="evento-tag">Futebol</span>
-                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=400&h=300&auto=format&fit=crop" alt="Torneio de Futebol de Seattle" />
-              </div>
-              <div class="evento-info">
-                <h3 class="evento-title">Torneio de Futebol de Seattle</h3>
-                <div class="evento-meta">
-                  <span class="evento-date">12.08.25 - Terça</span>
-                  <span class="evento-location">Seattle, WA</span>
-                </div>
-                <div class="evento-countdown">
-                  <p>Disponíveis em:</p>
-                  <div class="countdown-timer">
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
-                    <div class="time-separator">:</div>
-                    <div class="time-block">00</div>
+            <div class="evento-card" style="background-image: url('https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=400&h=300&auto=format&fit=crop')">
+              <span class="evento-tag">Futebol</span>
+              <div class="evento-overlay">
+                <div class="evento-info">
+                  <h3 class="evento-title">Torneio de Futebol de Seattle</h3>
+                  <div class="evento-meta">
+                    <span class="evento-date"><i class="far fa-calendar-alt"></i> 12.08.25 - Terça</span>
+                    <span class="evento-location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</span>
+                  </div>
+                  <div class="evento-countdown">
+                    <p>Disponíveis em:</p>
+                    <div class="countdown-timer">
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                      <div class="time-separator">:</div>
+                      <div class="time-block">00</div>
+                    </div>
                   </div>
                 </div>
               </div>
