@@ -1,3 +1,18 @@
+/* Definição de variáveis CSS para garantir consistência mesmo se style.css falhar */
+:root {
+  --primary-color: #FF5722;
+  --primary-dark: #E64A19;
+  --primary-light: #FFCCBC;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --gray-medium: #E0E0E0;
+  --gray-dark: #9E9E9E;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-family: 'Poppins', sans-serif;
+}
+
 /* Estilos específicos para a página de login */
 .login-section {
   display: flex;
