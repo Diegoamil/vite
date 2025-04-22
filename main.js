@@ -1,6 +1,3 @@
-import './style.css'
-import { setupEventCardLinks } from './event.js'
-
 // Inicialização do site SportShot
 document.addEventListener('DOMContentLoaded', () => {
   // Configuração do botão de acesso para redirecionar para a página de login
@@ -385,6 +382,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  
+  // Função para configurar os links dos cards de eventos para a página de evento
+  function setupEventCardLinks() {
+    const eventCards = document.querySelectorAll('.evento-card');
+    eventCards.forEach(card => {
+      // Verificar se já tem evento de clique configurado
+      const hasClickEvent = card.getAttribute('data-has-click');
+      if (!hasClickEvent) {
+        card.setAttribute('data-has-click', 'true');
+        card.addEventListener('click', () => {
+          window.location.href = './event.html';
+        });
+      }
+    });
+  }
   
   // Configurar os links dos cards de eventos para a página de evento
   setupEventCardLinks();
