@@ -1,6 +1,3 @@
-import './style.css'
-import './login.css'
-
 document.addEventListener('DOMContentLoaded', () => {
   // Funcionalidade para mostrar/ocultar senha
   const togglePasswordBtn = document.querySelector('.toggle-password');
@@ -38,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Simulação de login bem-sucedido
       alert('Login realizado com sucesso!');
-      window.location.href = '/index.html';
+      window.location.href = './index.html';
     });
   }
 });

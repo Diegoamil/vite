@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Se tudo estiver válido, simular o envio do formulário
       alert('Cadastro realizado com sucesso! Você será redirecionado para a página de login.');
-      window.location.href = '/login.html';
+      window.location.href = './login.html';
     });
   }
 });

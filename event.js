@@ -402,7 +402,7 @@ export function setupEventCardLinks() {
   eventCards.forEach(card => {
     card.addEventListener('click', () => {
       console.log('Card de evento clicado, redirecionando...');
-      window.location.href = '/event.html';
+      window.location.href = './event.html';
     });
   });
 }
