@@ -1,13 +1,177 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>SportShot - Encontre suas fotos de eventos esportivos</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <!-- Header/Navbar -->
+      <header class="navbar">
+        <div class="container navbar-container">
+          <div class="logo">
+            <img src="/images/sportshot-logo-with-text.svg" alt="SportShot Logo" />
+          </div>
+          <div class="nav-actions">
+            <button class="btn btn-outline">Acessar</button>
+            <button class="btn btn-primary">Criar conta</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="avatar-group">
+              <div class="avatars">
+                <!-- Avatares dos profissionais -->
+                <span class="avatar"></span>
+                <span class="avatar"></span>
+                <span class="avatar"></span>
+                <span class="avatar"></span>
+                <span class="avatar"></span>
+                <span class="avatar"></span>
+              </div>
+              <p class="avatar-text">Junte-se aos +de 100 profissionais</p>
+            </div>
+            
+            <h1 class="hero-title">Encontre suas fotos de eventos esportivos</h1>
+            
+            <p class="hero-description">
+              Envie uma selfie para descobrir todas as suas fotos de eventos esportivos
+              usando nossa tecnologia de reconhecimento facial.
+            </p>
+            
+            <div class="hero-buttons">
+              <button class="btn btn-primary">Encontrar minhas fotos</button>
+              <button class="btn btn-outline-light">Buscar eventos</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eventos Recentes Section -->
+      <section class="eventos-recentes">
+        <div class="container">
+          <h2 class="section-title">Eventos Recentes</h2>
+          
+          <div class="eventos-grid">
+            <!-- Evento 1 -->
+            <div class="evento-card">
+              <div class="evento-img">
+                <span class="evento-tag">Corrida</span>
+                <img src="https://source.unsplash.com/random/400x300/?marathon,running" alt="Maratona de Boston 2025" />
+              </div>
+              <div class="evento-info">
+                <h3 class="evento-title">Maratona de Boston 2025</h3>
+                <div class="evento-meta">
+                  <span class="evento-date">21.04.25 - Segunda</span>
+                  <span class="evento-location">Boston, MA</span>
+                </div>
+                <div class="evento-countdown">
+                  <p>Disponíveis em:</p>
+                  <div class="countdown-timer">
+                    <div class="time-block">01</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">23</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">59</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">10</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="evento-card">
+              <div class="evento-img">
+                <span class="evento-tag">Triatlo</span>
+                <img src="https://source.unsplash.com/random/400x300/?triathlon,swimming" alt="Triatlo de Nova York" />
+              </div>
+              <div class="evento-info">
+                <h3 class="evento-title">Triatlo de Nova York</h3>
+                <div class="evento-meta">
+                  <span class="evento-date">18.07.25 - Terça</span>
+                  <span class="evento-location">Nova York, NY</span>
+                </div>
+                <div class="evento-countdown">
+                  <p>Disponíveis em:</p>
+                  <div class="countdown-timer">
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="evento-card">
+              <div class="evento-img">
+                <span class="evento-tag">Corrida</span>
+                <img src="https://source.unsplash.com/random/400x300/?running,race" alt="Meia Maratona de Chicago" />
+              </div>
+              <div class="evento-info">
+                <h3 class="evento-title">Meia Maratona de Chicago</h3>
+                <div class="evento-meta">
+                  <span class="evento-date">07.09.25 - Domingo</span>
+                  <span class="evento-location">Chicago, IL</span>
+                </div>
+                <div class="evento-countdown">
+                  <p>Disponíveis em:</p>
+                  <div class="countdown-timer">
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">03</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">59</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">10</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="evento-card">
+              <div class="evento-img">
+                <span class="evento-tag">Futebol</span>
+                <img src="https://source.unsplash.com/random/400x300/?soccer,football" alt="Torneio de Futebol de Seattle" />
+              </div>
+              <div class="evento-info">
+                <h3 class="evento-title">Torneio de Futebol de Seattle</h3>
+                <div class="evento-meta">
+                  <span class="evento-date">12.08.25 - Terça</span>
+                  <span class="evento-location">Seattle, WA</span>
+                </div>
+                <div class="evento-countdown">
+                  <p>Disponíveis em:</p>
+                  <div class="countdown-timer">
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

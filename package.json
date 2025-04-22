@@ -10,9 +10,15 @@
     "start": "serve dist"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4",
     "vite": "^5.4.8"
   },
   "dependencies": {
+    "lucide-react": "^0.503.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "serve": "^14.2.4"
   }
 }
