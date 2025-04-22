@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const acessarBtn = document.querySelector('.nav-actions .btn-outline');
   if (acessarBtn) {
     acessarBtn.addEventListener('click', () => {
-      window.location.href = '/login.html';
+      window.location.href = './login.html';
     });
   }
   
@@ -33,27 +33,60 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Funções do modal
   function openModal() {
+    if (!selfieModal) {
+      console.error('Modal não encontrado no DOM');
+      return;
+    }
+    
+    // Adicionar classe active para exibir o modal
     selfieModal.classList.add('active');
+    selfieModal.style.display = 'flex';
+    
+    // Animação de entrada do modal
     setTimeout(() => {
-      selfieModal.querySelector('.modal-content').style.transform = 'translateY(0)';
+      const modalContent = selfieModal.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.style.transform = 'translateY(0)';
+      }
     }, 10);
+    
+    console.log('Modal aberto com sucesso');
   }
   
   function closeModal() {
-    selfieModal.querySelector('.modal-content').style.transform = 'translateY(20px)';
+    if (!selfieModal) {
+      console.error('Modal não encontrado no DOM');
+      return;
+    }
+    
+    const modalContent = selfieModal.querySelector('.modal-content');
+    if (modalContent) {
+      modalContent.style.transform = 'translateY(20px)';
+    }
+    
     setTimeout(() => {
       selfieModal.classList.remove('active');
+      selfieModal.style.display = 'none';
       resetModal();
     }, 300);
+    
+    console.log('Modal fechado');
   }
   
   function resetModal() {
-    stopCamera();
-    optionCards.style.display = 'grid';
-    cameraContainer.style.display = 'none';
-    uploadPreview.style.display = 'none';
-    retakePhotoBtn.style.display = 'none';
-    takePhotoBtn.style.display = 'block';
+    try {
+      stopCamera();
+      
+      if (optionCards) optionCards.style.display = 'grid';
+      if (cameraContainer) cameraContainer.style.display = 'none';
+      if (uploadPreview) uploadPreview.style.display = 'none';
+      if (retakePhotoBtn) retakePhotoBtn.style.display = 'none';
+      if (takePhotoBtn) takePhotoBtn.style.display = 'block';
+      
+      console.log('Modal resetado com sucesso');
+    } catch (error) {
+      console.error('Erro ao resetar o modal:', error);
+    }
   }
   
   function startCamera() {
@@ -130,7 +163,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event Listeners para o modal
   const encontrarFotosBtn = document.querySelector('.hero-buttons .btn-primary');
   if (encontrarFotosBtn) {
-    encontrarFotosBtn.addEventListener('click', openModal);
+    console.log('Botão Encontrar minhas fotos encontrado, configurando evento de clique');
+    
+    // Remover qualquer evento existente para evitar duplicação
+    encontrarFotosBtn.removeEventListener('click', openModal);
+    
+    // Adicionar o evento de clique
+    encontrarFotosBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Botão Encontrar minhas fotos clicado');
+      openModal();
+    });
+  } else {
+    console.error('Botão Encontrar minhas fotos não encontrado no DOM');
   }
   
   if (closeModalBtn) {
@@ -296,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Adicionar evento de clique diretamente ao criar o card
       eventoCard.addEventListener('click', () => {
-        window.location.href = '/event.html';
+        window.location.href = './event.html';
       });
       
       eventosGrid.appendChild(eventoCard);
