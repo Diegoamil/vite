@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportShot - Evento</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/event.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header/Navbar -->
+      <header class="navbar">
+        <div class="container navbar-container">
+          <div class="logo">
+            <h1 class="logo-text">Sport<span>Shot</span></h1>
+          </div>
+          <div class="nav-actions">
+            <a href="/index.html" class="btn btn-outline">Voltar</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Event Header Section -->
+      <section class="event-header">
+        <div class="container">
+          <div class="event-header-content">
+            <div class="event-header-text">
+              <h1 id="event-title">FOTOS TRIATHLON SPRINT/STANDARD</h1>
+              <div class="event-info">
+                <p id="event-details">domingo - 20.04.25 - Rio de Janeiro, RJ . 112.838 fotos. 125 videos. Evento por <a href="#">Ivan Sampaio</a> @ivansampaiofotos.</p>
+              </div>
+            </div>
+            <div class="event-header-action">
+              <button class="btn btn-primary btn-hero" id="open-facial-modal">
+                <i class="fas fa-camera"></i> Buscar por reconhecimento facial
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Grid Section -->
+      <section class="photo-grid">
+        <div class="container">
+          <h2 class="section-title">Fotos do evento</h2>
+          <div class="photos-container" id="photos-container">
+            <!-- Photos will be loaded dynamically -->
+          </div>
+        </div>
+      </section>
+
+    </div>
+    
+    <!-- Modal para Selfie/Upload -->
+    <div class="modal" id="selfieModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Encontre suas fotos</h3>
+          <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-description">Escolha como deseja buscar suas fotos:</p>
+          
+          <div class="option-cards">
+            <div class="option-card" id="uploadOption">
+              <div class="option-icon">
+                <i class="fas fa-upload"></i>
+              </div>
+              <h4>Enviar foto</h4>
+              <p>Selecione uma foto existente do seu dispositivo</p>
+              <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+              <button class="btn btn-outline option-btn">Escolher arquivo</button>
+            </div>
+            
+            <div class="option-card" id="selfieOption">
+              <div class="option-icon">
+                <i class="fas fa-camera"></i>
+              </div>
+              <h4>Tirar selfie</h4>
+              <p>Use sua câmera para tirar uma selfie agora</p>
+              <button class="btn btn-primary option-btn">Abrir câmera</button>
+            </div>
+          </div>
+          
+          <div class="camera-container" style="display: none;">
+            <video id="cameraFeed" autoplay playsinline></video>
+            <canvas id="photoCanvas" style="display: none;"></canvas>
+            <div class="camera-controls">
+              <button id="takePhotoBtn" class="btn btn-primary"><i class="fas fa-camera"></i> Tirar foto</button>
+              <button id="retakePhotoBtn" class="btn btn-outline" style="display: none;"><i class="fas fa-redo"></i> Repetir</button>
+              <button id="backFromCameraBtn" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Voltar</button>
+            </div>
+          </div>
+          
+          <div class="upload-preview" style="display: none;">
+            <img id="uploadPreview" src="#" alt="Preview da imagem">
+            <div class="upload-controls">
+              <button id="confirmUploadBtn" class="btn btn-primary"><i class="fas fa-check"></i> Confirmar</button>
+              <button id="changeUploadBtn" class="btn btn-outline"><i class="fas fa-redo"></i> Trocar</button>
+              <button id="backFromUploadBtn" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Voltar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/event.js"></script>
+  </body>
+</html>

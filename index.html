@@ -19,7 +19,7 @@
           </div>
           <div class="nav-actions">
             <button class="btn btn-outline">Acessar</button>
-            <button class="btn btn-primary">Criar conta</button>
+            <a href="/register.html" class="btn btn-primary">Criar conta</a>
           </div>
         </div>
       </header>
@@ -41,7 +41,7 @@
               <p class="avatar-text">Junte-se aos +de 100 profissionais</p>
             </div>
             
-            <h1 class="hero-title">Encontre suas fotos de eventos esportivos</h1>
+            <h1 class="hero-title">Encontre suas melhores fotos aqui</h1>
             
             <p class="hero-description">
               Envie uma selfie para descobrir todas as suas fotos de eventos esportivos
@@ -125,8 +125,6 @@
                   <div class="evento-countdown">
                     <p>Disponíveis em:</p>
                     <div class="countdown-timer">
-                      <div class="time-block">00</div>
-                      <div class="time-separator">:</div>
                       <div class="time-block">03</div>
                       <div class="time-separator">:</div>
                       <div class="time-block">59</div>
@@ -167,6 +165,60 @@
         </div>
       </section>
     </div>
+    
+    <!-- Modal para Selfie/Upload -->
+    <div class="modal" id="selfieModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Encontre suas fotos</h3>
+          <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-description">Escolha como deseja buscar suas fotos:</p>
+          
+          <div class="option-cards">
+            <div class="option-card" id="uploadOption">
+              <div class="option-icon">
+                <i class="fas fa-upload"></i>
+              </div>
+              <h4>Enviar foto</h4>
+              <p>Selecione uma foto existente do seu dispositivo</p>
+              <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+              <button class="btn btn-outline option-btn">Escolher arquivo</button>
+            </div>
+            
+            <div class="option-card" id="selfieOption">
+              <div class="option-icon">
+                <i class="fas fa-camera"></i>
+              </div>
+              <h4>Tirar selfie</h4>
+              <p>Use sua câmera para tirar uma selfie agora</p>
+              <button class="btn btn-primary option-btn">Abrir câmera</button>
+            </div>
+          </div>
+          
+          <div class="camera-container" style="display: none;">
+            <video id="cameraFeed" autoplay playsinline></video>
+            <canvas id="photoCanvas" style="display: none;"></canvas>
+            <div class="camera-controls">
+              <button id="takePhotoBtn" class="btn btn-primary"><i class="fas fa-camera"></i> Tirar foto</button>
+              <button id="retakePhotoBtn" class="btn btn-outline" style="display: none;"><i class="fas fa-redo"></i> Repetir</button>
+              <button id="backFromCameraBtn" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Voltar</button>
+            </div>
+          </div>
+          
+          <div class="upload-preview" style="display: none;">
+            <img id="uploadPreview" src="#" alt="Preview da imagem">
+            <div class="upload-controls">
+              <button id="confirmUploadBtn" class="btn btn-primary"><i class="fas fa-check"></i> Confirmar</button>
+              <button id="changeUploadBtn" class="btn btn-outline"><i class="fas fa-redo"></i> Trocar</button>
+              <button id="backFromUploadBtn" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Voltar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

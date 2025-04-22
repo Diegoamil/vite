@@ -292,6 +292,7 @@ body {
 .evento-countdown p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
 }
 
 .countdown-timer {
@@ -316,6 +317,167 @@ body {
   font-family: var(--font-family);
 }
 
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--gray-dark);
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: var(--text-dark);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-description {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.option-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-card {
+  background-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.option-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.option-card p {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  margin-bottom: 1.2rem;
+}
+
+.option-btn {
+  width: 100%;
+}
+
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.upload-preview {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cameraFeed, #photoCanvas {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: #f0f0f0;
+}
+
+#uploadPreview {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+}
+
+.camera-controls, .upload-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-title {
@@ -337,6 +499,10 @@ body {
   
   .hero-buttons .btn {
     width: 100%;
+  }
+  
+  .option-cards {
+    grid-template-columns: 1fr;
   }
 }
 
